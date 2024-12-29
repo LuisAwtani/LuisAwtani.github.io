@@ -1,0 +1,84 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 1; /* Covers most of the screen */
+    background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.backdrop {
+    background-image: url('techy-backdrop.jpg'); /* Replace with the actual path */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.right-panel {
+    flex: 1; /* Narrow rectangle on the right */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    text-align: center;
+    padding: 60px;
+}
+
+.portrait {
+    width: 60%; /* Adjust the size of the rectangular photo */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 2vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #1a1a1a;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin: 5px 0 15px 0;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0078d7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005ea3;
+}
