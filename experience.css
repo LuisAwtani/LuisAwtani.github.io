@@ -203,3 +203,31 @@ body {
 .project-link i {
     font-size: 1.1rem;
 }
+
+.project-detail-content {
+    width: 100%;
+    padding: 1rem;
+}
+
+.project-detail-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-detail-content h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.project-card.active {
+    border-color: #3498db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.default-message {
+    color: #666;
+    font-style: italic;
+}

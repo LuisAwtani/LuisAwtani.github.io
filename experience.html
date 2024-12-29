@@ -23,27 +23,14 @@
                     </a>
                 </li>
                 <li>
-                    <div class="project-card">
+                    <div class="project-card" data-project="big2">
                         <h3>Jane Street Hackathon: Big 2 Bot</h3>
-                        <p>Developed "Mystic", an AI bot for the Big 2 card game competition. The bot implements strategic gameplay using card strength evaluation, pair detection, and adaptive play strategies based on game state.</p>
+                        <p>Developed "Mystic", an AI bot for the Big 2 card game competition.</p>
                         <div class="project-tags">
                             <span>Python</span>
                             <span>AI/ML</span>
                             <span>Game Theory</span>
                             <span>Algorithms</span>
-                        </div>
-                        <div class="project-features">
-                            <ul>
-                                <li>Custom card strength evaluation system</li>
-                                <li>Intelligent pair detection and play strategy</li>
-                                <li>Dynamic gameplay adaptation based on card history</li>
-                                <li>State-based decision making</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LuisAwtani/Big_2_bot" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
                         </div>
                     </div>
                 </li>
@@ -83,10 +70,31 @@
         </div>
         <div class="right-panel">
             <div class="project-details">
-                <p>Click on a project to see more details...</p>
+                <p class="default-message">Click on a project to see more details...</p>
+                
+                <!-- Big 2 Project Details -->
+                <div class="project-detail-content" id="big2-details" style="display: none;">
+                    <img src="images/Big2.jpg" alt="Jane Street Big 2 Hackathon" class="project-banner">
+                    <h2>Jane Street Hackathon: Big 2 Bot</h2>
+                    <p>Developed "Mystic", an AI bot for the Big 2 card game competition. The bot implements strategic gameplay using card strength evaluation, pair detection, and adaptive play strategies based on game state.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Custom card strength evaluation system</li>
+                            <li>Intelligent pair detection and play strategy</li>
+                            <li>Dynamic gameplay adaptation based on card history</li>
+                            <li>State-based decision making</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/LuisAwtani/Big_2_bot" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
             </div>
             <a href="index.html" class="back-button">Back to Home</a>
         </div>
     </div>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
