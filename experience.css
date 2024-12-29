@@ -52,9 +52,9 @@ body {
     background: #ffffff;
     border: 1px solid #e1e1e1;
     border-radius: 8px;
-    text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -76,13 +76,13 @@ body {
 }
 
 /* Tags styles */
-.tags {
+.project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.tags span {
+.project-tags span {
     background: #e1f0ff;
     color: #3498db;
     padding: 0.25rem 0.75rem;
