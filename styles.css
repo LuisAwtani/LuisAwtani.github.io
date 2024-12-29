@@ -26,7 +26,7 @@ body {
 }
 
 .backdrop {
-    background-image: url('techy-backdrop.jpg'); /* Replace with the actual path */
+    background-image: url('images/techy-backdrop.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
