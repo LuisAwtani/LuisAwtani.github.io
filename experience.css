@@ -16,14 +16,15 @@ body {
     display: flex;
     min-height: 100vh;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 80px auto;
     padding: 2rem;
     gap: 2rem;
+    position: relative;
 }
 
 /* Left panel styles */
 .left-panel {
-    flex: 1;
+    flex: 0 0 45%;
     padding: 2rem;
     background: white;
     border-radius: 10px;
@@ -55,6 +56,7 @@ body {
     color: inherit;
     transition: all 0.3s ease;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .project-card:hover {
@@ -93,22 +95,28 @@ body {
 
 /* Right panel styles */
 .right-panel {
-    flex: 1;
+    flex: 0 0 45%;
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 120px);
     padding: 2rem;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .project-details {
     flex: 1;
+    min-height: 400px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-style: italic;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    overflow-y: auto;
 }
 
 /* Back button styles */
@@ -206,7 +214,10 @@ body {
 
 .project-detail-content {
     width: 100%;
+    height: 100%;
     padding: 1rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .project-detail-content img {
@@ -228,6 +239,66 @@ body {
 }
 
 .default-message {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
     color: #666;
     font-style: italic;
+}
+
+/* CV button styles */
+.cv-button-container {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.cv-button:hover {
+    background: #34495e;
+}
+
+/* Project content specific styles */
+.project-features h3 {
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.project-features h3:first-child {
+    margin-top: 0;
+}
+
+/* Update project-detail-content styles */
+.project-detail-content p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* Add this style for the UCL card's CV button */
+#ucl-details .project-link {
+    background: #2c3e50;  /* Dark color like the original CV button */
+}
+
+#ucl-details .project-link:hover {
+    background: #34495e;
+}
+
+/* Remove these styles since we're not using them anymore */
+.cv-button-container,
+.cv-button,
+.back-button {
+    display: none;
 }

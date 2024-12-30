@@ -1,0 +1,200 @@
+/* Add at the top of blog.css */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto !important; /* Force enable scrolling */
+    position: relative;
+    display: block !important; /* Override flex display */
+    justify-content: initial !important; /* Remove flex justification */
+    align-items: initial !important; /* Remove flex alignment */
+    height: auto !important; /* Allow content to determine height */
+}
+
+/* Blog page styles */
+.blog-container {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+    min-height: calc(100vh - 120px); /* Account for navbar and margins */
+}
+
+.blog-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: minmax(auto, 600px); /* Limit max width */
+    justify-content: center; /* Center the card */
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 300px; /* Increase height for better aspect ratio */
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.post-meta .category {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.blog-post h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.blog-post p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .blog-container {
+        margin-top: 60px;
+    }
+} 
+
+/* Add these styles for individual blog posts */
+.blog-post-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.blog-post-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    height: auto;
+    overflow: visible;
+}
+
+.blog-header-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1; /* Light border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.principles-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.principles-section ol {
+    padding-left: 1.5rem;
+}
+
+.principles-section li {
+    margin: 1rem 0;
+    color: #2c3e50;
+}
+
+.inspirational-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.blog-post-content h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-content h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+}
+
+.blog-post-content p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* Read time indicator */
+.read-time {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+} 

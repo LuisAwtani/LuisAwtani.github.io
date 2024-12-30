@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Awtani - Experience</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="experience.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">LBA</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="experience.html" class="active">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
     <div class="experience-container">
         <div class="left-panel">
             <h1>My Journey</h1>
             <ul class="cv-list">
                 <li>
-                    <a href="#" class="cv-link project-card">
+                    <div class="project-card" data-project="ucl">
                         <h3>Master of Engineering at UCL</h3>
                         <p>Electrical and Electronic Engineering</p>
-                        <div class="tags">
+                        <div class="project-tags">
                             <span>Academic</span>
                             <span>Engineering</span>
                         </div>
-                    </a>
+                    </div>
                 </li>
                 <li>
                     <div class="project-card" data-project="big2">
@@ -35,36 +45,36 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" class="cv-link project-card">
+                    <div class="project-card" data-project="cnn">
                         <h3>FPGA-based CNN</h3>
                         <p>Convolutional Neural Network Implementation</p>
-                        <div class="tags">
+                        <div class="project-tags">
                             <span>FPGA</span>
                             <span>VHDL</span>
                             <span>ML</span>
                         </div>
-                    </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#" class="cv-link project-card">
+                    <div class="project-card" data-project="mlresearch">
                         <h3>ML Research</h3>
                         <p>Machine Learning Research on Regression</p>
-                        <div class="tags">
+                        <div class="project-tags">
                             <span>Python</span>
                             <span>ML</span>
                             <span>Research</span>
                         </div>
-                    </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="#" class="cv-link project-card">
+                    <div class="project-card" data-project="trading">
                         <h3>Trading Simulation</h3>
                         <p>Python Stock Trading Simulation App</p>
-                        <div class="tags">
+                        <div class="project-tags">
                             <span>Python</span>
                             <span>Finance</span>
                         </div>
-                    </a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -91,8 +101,36 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- UCL Project Details -->
+                <div class="project-detail-content" id="ucl-details" style="display: none;">
+                    <img src="images/ucl-logo-white-on-black.jpg" alt="UCL Engineering" class="project-banner">
+                    <h2>MEng Electrical and Electronic Engineering at UCL</h2>
+                    <p>Currently in my third year of the MEng program at University College London, pursuing Electrical and Electronic Engineering with a year abroad at the University of Western Australia (UWA). Maintaining first-class honours throughout my academic journey while actively contributing to the department's community.</p>
+                    
+                    <div class="project-features">
+                        <h3>Academic Achievements</h3>
+                        <ul>
+                            <li>First-class honours maintained across all years</li>
+                            <li>Selected for competitive year abroad program at UWA</li>
+                            <li>Specializing in ML/AI and Electronic Systems</li>
+                        </ul>
+
+                        <h3>Leadership Roles</h3>
+                        <ul>
+                            <li>Student Representative (2 years) - Representing cohort of 200+ students</li>
+                            <li>Events Manager at Fleming Society - Departmental Electrical Engineering society</li>
+                            <li>Organizing academic and networking events for engineering students</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="CV.pdf" target="_blank" class="project-link">
+                            <i class="fas fa-file-pdf"></i> View CV
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href="index.html" class="back-button">Back to Home</a>
         </div>
     </div>
     <script src="scripts/main.js"></script>
