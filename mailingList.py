@@ -1,5 +1,7 @@
 import subprocess
 import re
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import json
 
 # Function to validate the email address
 def is_valid_email(email):
@@ -38,8 +40,39 @@ def add_email_to_dynamodb(email):
     except Exception as e:
         return f"An unexpected error occurred: {str(e)}"
 
-# Main script
+class SubscribeHandler(BaseHTTPRequestHandler):
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'POST')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.end_headers()
+
+    def do_POST(self):
+        content_length = int(self.headers['Content-Length'])
+        post_data = self.rfile.read(content_length)
+        data = json.loads(post_data.decode('utf-8'))
+        email = data.get('email')
+        
+        if not email:
+            self.send_error(400, "Email is required")
+            return
+            
+        result = add_email_to_dynamodb(email)
+        
+        self.send_response(200 if "successfully" in result else 400)
+        self.send_header('Content-type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        
+        response = {'message' if "successfully" in result else 'error': result}
+        self.wfile.write(json.dumps(response).encode())
+
+def run_server(port=8000):
+    server_address = ('', port)
+    httpd = HTTPServer(server_address, SubscribeHandler)
+    print(f'Starting subscription server on port {port}...')
+    httpd.serve_forever()
+
 if __name__ == "__main__":
-    email_input = input("Enter the email address to add to the mailing list: ").strip()
-    result = add_email_to_dynamodb(email_input)
-    print(result)
+    run_server()
